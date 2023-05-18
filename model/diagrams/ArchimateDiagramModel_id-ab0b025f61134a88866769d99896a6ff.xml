@@ -16,6 +16,7 @@
     <children
         xsi:type="archimate:DiagramModelArchimateObject"
         id="id-05543514e0714299b9b164d5dc285cf2"
+        targetConnections="id-9fad4f02cd244304adda4146ed384f0d"
         type="1">
       <sourceConnections
           xsi:type="archimate:DiagramModelArchimateConnection"
@@ -37,8 +38,39 @@
     </children>
     <children
         xsi:type="archimate:DiagramModelArchimateObject"
+        id="id-d4f80be77bce4c60833b42e64468c0fa"
+        targetConnections="id-2c2c7eed2e7b4586a414465ab71fbd41">
+      <sourceConnections
+          xsi:type="archimate:DiagramModelArchimateConnection"
+          id="id-9fad4f02cd244304adda4146ed384f0d"
+          source="id-d4f80be77bce4c60833b42e64468c0fa"
+          target="id-05543514e0714299b9b164d5dc285cf2">
+        <archimateRelationship
+            xsi:type="archimate:AssociationRelationship"
+            href="AssociationRelationship_id-90aec3d4fbce4753b41cad6630cd1198.xml#id-90aec3d4fbce4753b41cad6630cd1198"/>
+      </sourceConnections>
+      <bounds
+          x="288"
+          y="84"
+          width="120"
+          height="55"/>
+      <archimateElement
+          xsi:type="archimate:ApplicationInterface"
+          href="ApplicationInterface_id-055c0111939d4114b823bde99d0dd406.xml#id-055c0111939d4114b823bde99d0dd406"/>
+    </children>
+    <children
+        xsi:type="archimate:DiagramModelArchimateObject"
         id="id-78101f8f6b594e308fb9be536030f8d0"
         targetConnections="id-cf99684f5c6b4591a477dc2f9c929fca">
+      <sourceConnections
+          xsi:type="archimate:DiagramModelArchimateConnection"
+          id="id-2c2c7eed2e7b4586a414465ab71fbd41"
+          source="id-78101f8f6b594e308fb9be536030f8d0"
+          target="id-d4f80be77bce4c60833b42e64468c0fa">
+        <archimateRelationship
+            xsi:type="archimate:FlowRelationship"
+            href="FlowRelationship_id-813c4dd9599e4537978290bbe6afc665.xml#id-813c4dd9599e4537978290bbe6afc665"/>
+      </sourceConnections>
       <bounds
           x="612"
           y="84"
