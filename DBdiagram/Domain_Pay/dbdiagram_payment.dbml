@@ -1,0 +1,76 @@
+// Платёжный домен — DBML модель
+
+Table merchants {
+  id              int [pk, increment]
+  name            varchar(255)
+  email           varchar(255)
+  created_at      datetime
+}
+
+Table customers {
+  id              int [pk, increment]
+  first_name      varchar(100)
+  last_name       varchar(100)
+  email           varchar(255)
+  phone           varchar(50)
+  created_at      datetime
+}
+
+Table payment_methods {
+  id              int [pk, increment]
+  method_type     varchar(50) // card, bank_transfer, e-wallet, crypto
+  details         text
+  provider_id     int
+  created_at      datetime
+}
+
+Table providers {
+  id              int [pk, increment]
+  name            varchar(100)
+  api_endpoint    varchar(255)
+  country         varchar(50)
+  created_at      datetime
+}
+
+Table currencies {
+  code            varchar(3) [pk] // ISO code: USD, EUR, etc.
+  name            varchar(50)
+  symbol          varchar(5)
+}
+
+Table payments {
+  id              int [pk, increment]
+  merchant_id     int
+  customer_id     int
+  amount          decimal(12, 2)
+  currency_code   varchar(3)
+  payment_method_id int
+  status          varchar(50) // pending, completed, failed, refunded
+  created_at      datetime
+  updated_at      datetime
+}
+
+Table transactions {
+  id              int [pk, increment]
+  payment_id      int
+  provider_id     int
+  transaction_ref varchar(255)
+  amount          decimal(12, 2)
+  currency_code   varchar(3)
+  status          varchar(50) // initiated, success, failed
+  created_at      datetime
+}
+
+Ref: payments.merchant_id > merchants.id
+Ref: payments.customer_id > customers.id
+Ref: payments.currency_code > currencies.code
+Ref: payments.payment_method_id > payment_methods.id
+Ref: payment_methods.provider_id > providers.id
+Ref: transactions.payment_id > payments.id
+Ref: transactions.provider_id > providers.id
+Ref: transactions.currency_code > currencies.code
+
+
+
+
+
