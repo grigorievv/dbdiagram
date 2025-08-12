@@ -1,0 +1,497 @@
+{
+  "configuration" : { },
+  "description" : "C4 model for payment processing with check and pay services",
+  "documentation" : { },
+  "id" : 1,
+  "lastModifiedAgent" : "structurizr-ui",
+  "lastModifiedDate" : "2025-08-12T06:44:33Z",
+  "model" : {
+    "people" : [ {
+      "description" : "Initiates payments via mobile app or web portal",
+      "id" : "1",
+      "location" : "Unspecified",
+      "name" : "Customer",
+      "properties" : {
+        "structurizr.dsl.identifier" : "u"
+      },
+      "relationships" : [ {
+        "description" : "Initiates payment via mobile/web",
+        "destinationId" : "4",
+        "id" : "16",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Initiates payment via mobile/web",
+        "destinationId" : "3",
+        "id" : "17",
+        "linkedRelationshipId" : "16",
+        "sourceId" : "1"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Monitors and manages payment operations",
+      "id" : "2",
+      "location" : "Unspecified",
+      "name" : "Bank Admin",
+      "properties" : {
+        "structurizr.dsl.identifier" : "ba"
+      },
+      "relationships" : [ {
+        "description" : "Monitors payments via admin console",
+        "destinationId" : "4",
+        "id" : "18",
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Monitors payments via admin console",
+        "destinationId" : "3",
+        "id" : "19",
+        "linkedRelationshipId" : "18",
+        "sourceId" : "2"
+      } ],
+      "tags" : "Element,Person"
+    } ],
+    "softwareSystems" : [ {
+      "containers" : [ {
+        "description" : "Routes requests to payment services",
+        "documentation" : { },
+        "id" : "4",
+        "name" : "API Gateway",
+        "properties" : {
+          "structurizr.dsl.identifier" : "ps.api"
+        },
+        "relationships" : [ {
+          "description" : "Validates payment requests",
+          "destinationId" : "5",
+          "id" : "20",
+          "sourceId" : "4",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Executes payments after validation",
+          "destinationId" : "10",
+          "id" : "21",
+          "sourceId" : "4",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Calls validation endpoint",
+          "destinationId" : "6",
+          "id" : "26",
+          "sourceId" : "4",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Calls payment execution endpoint",
+          "destinationId" : "11",
+          "id" : "31",
+          "sourceId" : "4",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Java + Spring Boot"
+      }, {
+        "components" : [ {
+          "description" : "REST endpoint for payment validation",
+          "documentation" : { },
+          "id" : "6",
+          "name" : "Validation Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "ps.check.cc"
+          },
+          "relationships" : [ {
+            "description" : "Checks limits",
+            "destinationId" : "7",
+            "id" : "27",
+            "sourceId" : "6",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Performs fraud detection",
+            "destinationId" : "8",
+            "id" : "28",
+            "sourceId" : "6",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Checks balance",
+            "destinationId" : "9",
+            "id" : "29",
+            "sourceId" : "6",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Validates daily and transaction limits",
+          "documentation" : { },
+          "id" : "7",
+          "name" : "Limit Checker",
+          "properties" : {
+            "structurizr.dsl.identifier" : "ps.check.cl"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Performs fraud checks",
+          "documentation" : { },
+          "id" : "8",
+          "name" : "Fraud Detector",
+          "properties" : {
+            "structurizr.dsl.identifier" : "ps.check.cf"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Checks if customer has enough balance",
+          "documentation" : { },
+          "id" : "9",
+          "name" : "Balance Verifier",
+          "properties" : {
+            "structurizr.dsl.identifier" : "ps.check.cb"
+          },
+          "relationships" : [ {
+            "description" : "Reads account balance",
+            "destinationId" : "14",
+            "id" : "30",
+            "sourceId" : "9",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Validates payment requests (balance, limits, fraud)",
+        "documentation" : { },
+        "id" : "5",
+        "name" : "Check Service",
+        "properties" : {
+          "structurizr.dsl.identifier" : "ps.check"
+        },
+        "relationships" : [ {
+          "description" : "Reads customer/account data",
+          "destinationId" : "14",
+          "id" : "22",
+          "sourceId" : "5",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Publishes validation events",
+          "destinationId" : "15",
+          "id" : "23",
+          "sourceId" : "5",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Java + Spring Boot"
+      }, {
+        "components" : [ {
+          "description" : "REST endpoint for payment execution",
+          "documentation" : { },
+          "id" : "11",
+          "name" : "Payment Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "ps.pay.pc"
+          },
+          "relationships" : [ {
+            "description" : "Processes payment request",
+            "destinationId" : "12",
+            "id" : "32",
+            "sourceId" : "11",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Handles core payment execution logic",
+          "documentation" : { },
+          "id" : "12",
+          "name" : "Payment Processor",
+          "properties" : {
+            "structurizr.dsl.identifier" : "ps.pay.pp"
+          },
+          "relationships" : [ {
+            "description" : "Sends payment to settlement",
+            "destinationId" : "13",
+            "id" : "33",
+            "sourceId" : "12",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Stores transaction result",
+            "destinationId" : "14",
+            "id" : "34",
+            "sourceId" : "12",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Integrates with external clearing/settlement systems",
+          "documentation" : { },
+          "id" : "13",
+          "name" : "Settlement Bridge",
+          "properties" : {
+            "structurizr.dsl.identifier" : "ps.pay.psb"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Executes payments and updates transaction status",
+        "documentation" : { },
+        "id" : "10",
+        "name" : "Pay Service",
+        "properties" : {
+          "structurizr.dsl.identifier" : "ps.pay"
+        },
+        "relationships" : [ {
+          "description" : "Writes payment transactions",
+          "destinationId" : "14",
+          "id" : "24",
+          "sourceId" : "10",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Publishes payment events",
+          "destinationId" : "15",
+          "id" : "25",
+          "sourceId" : "10",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Java + Spring Boot"
+      }, {
+        "description" : "Stores payment transactions and logs",
+        "documentation" : { },
+        "id" : "14",
+        "name" : "Payment DB",
+        "properties" : {
+          "structurizr.dsl.identifier" : "ps.db"
+        },
+        "tags" : "Element,Container",
+        "technology" : "PostgreSQL"
+      }, {
+        "description" : "Asynchronous events between services",
+        "documentation" : { },
+        "id" : "15",
+        "name" : "Message Broker",
+        "properties" : {
+          "structurizr.dsl.identifier" : "ps.mq"
+        },
+        "tags" : "Element,Container",
+        "technology" : "Kafka"
+      } ],
+      "description" : "Handles payment validation and execution",
+      "documentation" : { },
+      "id" : "3",
+      "location" : "Unspecified",
+      "name" : "Payment Platform",
+      "properties" : {
+        "structurizr.dsl.identifier" : "ps"
+      },
+      "tags" : "Element,Software System"
+    } ]
+  },
+  "name" : "Payment Domain",
+  "properties" : {
+    "structurizr.dsl" : "CndvcmtzcGFjZSAiUGF5bWVudCBEb21haW4iICJDNCBtb2RlbCBmb3IgcGF5bWVudCBwcm9jZXNzaW5nIHdpdGggY2hlY2sgYW5kIHBheSBzZXJ2aWNlcyIgewoKICAgICFpZGVudGlmaWVycyBoaWVyYXJjaGljYWwKCiAgICBtb2RlbCB7CiAgICAgICAgLy8g0JDQutGC0L7RgNGLCiAgICAgICAgdSA9IHBlcnNvbiAiQ3VzdG9tZXIiICJJbml0aWF0ZXMgcGF5bWVudHMgdmlhIG1vYmlsZSBhcHAgb3Igd2ViIHBvcnRhbCIKICAgICAgICBiYSA9IHBlcnNvbiAiQmFuayBBZG1pbiIgIk1vbml0b3JzIGFuZCBtYW5hZ2VzIHBheW1lbnQgb3BlcmF0aW9ucyIKCiAgICAgICAgLy8g0J7RgdC90L7QstC90LDRjyDRgdC40YHRgtC10LzQsAogICAgICAgIHBzID0gc29mdHdhcmVTeXN0ZW0gIlBheW1lbnQgUGxhdGZvcm0iICJIYW5kbGVzIHBheW1lbnQgdmFsaWRhdGlvbiBhbmQgZXhlY3V0aW9uIiB7CiAgICAgICAgICAgIAogICAgICAgICAgICAvLyDQmtC+0L3RgtC10LnQvdC10YDRiwogICAgICAgICAgICBhcGkgPSBjb250YWluZXIgIkFQSSBHYXRld2F5IiAiUm91dGVzIHJlcXVlc3RzIHRvIHBheW1lbnQgc2VydmljZXMiICJKYXZhICsgU3ByaW5nIEJvb3QiCiAgICAgICAgICAgIGNoZWNrID0gY29udGFpbmVyICJDaGVjayBTZXJ2aWNlIiAiVmFsaWRhdGVzIHBheW1lbnQgcmVxdWVzdHMgKGJhbGFuY2UsIGxpbWl0cywgZnJhdWQpIiAiSmF2YSArIFNwcmluZyBCb290IiB7CiAgICAgICAgICAgICAgICAvLyDQmtC+0LzQv9C+0L3QtdC90YLRiyBDaGVjayBTZXJ2aWNlCiAgICAgICAgICAgICAgICBjYyA9IGNvbXBvbmVudCAiVmFsaWRhdGlvbiBDb250cm9sbGVyIiAiUkVTVCBlbmRwb2ludCBmb3IgcGF5bWVudCB2YWxpZGF0aW9uIgogICAgICAgICAgICAgICAgY2wgPSBjb21wb25lbnQgIkxpbWl0IENoZWNrZXIiICJWYWxpZGF0ZXMgZGFpbHkgYW5kIHRyYW5zYWN0aW9uIGxpbWl0cyIKICAgICAgICAgICAgICAgIGNmID0gY29tcG9uZW50ICJGcmF1ZCBEZXRlY3RvciIgIlBlcmZvcm1zIGZyYXVkIGNoZWNrcyIKICAgICAgICAgICAgICAgIGNiID0gY29tcG9uZW50ICJCYWxhbmNlIFZlcmlmaWVyIiAiQ2hlY2tzIGlmIGN1c3RvbWVyIGhhcyBlbm91Z2ggYmFsYW5jZSIKICAgICAgICAgICAgfQogICAgICAgICAgICBwYXkgPSBjb250YWluZXIgIlBheSBTZXJ2aWNlIiAiRXhlY3V0ZXMgcGF5bWVudHMgYW5kIHVwZGF0ZXMgdHJhbnNhY3Rpb24gc3RhdHVzIiAiSmF2YSArIFNwcmluZyBCb290IiB7CiAgICAgICAgICAgICAgICAvLyDQmtC+0LzQv9C+0L3QtdC90YLRiyBQYXkgU2VydmljZQogICAgICAgICAgICAgICAgcGMgPSBjb21wb25lbnQgIlBheW1lbnQgQ29udHJvbGxlciIgIlJFU1QgZW5kcG9pbnQgZm9yIHBheW1lbnQgZXhlY3V0aW9uIgogICAgICAgICAgICAgICAgcHAgPSBjb21wb25lbnQgIlBheW1lbnQgUHJvY2Vzc29yIiAiSGFuZGxlcyBjb3JlIHBheW1lbnQgZXhlY3V0aW9uIGxvZ2ljIgogICAgICAgICAgICAgICAgcHNiID0gY29tcG9uZW50ICJTZXR0bGVtZW50IEJyaWRnZSIgIkludGVncmF0ZXMgd2l0aCBleHRlcm5hbCBjbGVhcmluZy9zZXR0bGVtZW50IHN5c3RlbXMiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZGIgPSBjb250YWluZXIgIlBheW1lbnQgREIiICJTdG9yZXMgcGF5bWVudCB0cmFuc2FjdGlvbnMgYW5kIGxvZ3MiICJQb3N0Z3JlU1FMIgogICAgICAgICAgICBtcSA9IGNvbnRhaW5lciAiTWVzc2FnZSBCcm9rZXIiICJBc3luY2hyb25vdXMgZXZlbnRzIGJldHdlZW4gc2VydmljZXMiICJLYWZrYSIKICAgICAgICB9CgogICAgICAgIC8vINCh0LLRj9C30Lgg0L3QsCDRg9GA0L7QstC90LUgU3lzdGVtIENvbnRleHQKICAgICAgICB1IC0+IHBzLmFwaSAiSW5pdGlhdGVzIHBheW1lbnQgdmlhIG1vYmlsZS93ZWIiCiAgICAgICAgYmEgLT4gcHMuYXBpICJNb25pdG9ycyBwYXltZW50cyB2aWEgYWRtaW4gY29uc29sZSIKCiAgICAgICAgLy8g0KHQstGP0LfQuCDQvdCwINGD0YDQvtCy0L3QtSBDb250YWluZXIKICAgICAgICBwcy5hcGkgLT4gcHMuY2hlY2sgIlZhbGlkYXRlcyBwYXltZW50IHJlcXVlc3RzIgogICAgICAgIHBzLmFwaSAtPiBwcy5wYXkgIkV4ZWN1dGVzIHBheW1lbnRzIGFmdGVyIHZhbGlkYXRpb24iCiAgICAgICAgcHMuY2hlY2sgLT4gcHMuZGIgIlJlYWRzIGN1c3RvbWVyL2FjY291bnQgZGF0YSIKICAgICAgICBwcy5jaGVjayAtPiBwcy5tcSAiUHVibGlzaGVzIHZhbGlkYXRpb24gZXZlbnRzIgogICAgICAgIHBzLnBheSAtPiBwcy5kYiAiV3JpdGVzIHBheW1lbnQgdHJhbnNhY3Rpb25zIgogICAgICAgIHBzLnBheSAtPiBwcy5tcSAiUHVibGlzaGVzIHBheW1lbnQgZXZlbnRzIgoKICAgICAgICAvLyDQodCy0Y/Qt9C4INCy0L3Rg9GC0YDQuCBDaGVjayBTZXJ2aWNlCiAgICAgICAgcHMuYXBpIC0+IHBzLmNoZWNrLmNjICJDYWxscyB2YWxpZGF0aW9uIGVuZHBvaW50IgogICAgICAgIHBzLmNoZWNrLmNjIC0+IHBzLmNoZWNrLmNsICJDaGVja3MgbGltaXRzIgogICAgICAgIHBzLmNoZWNrLmNjIC0+IHBzLmNoZWNrLmNmICJQZXJmb3JtcyBmcmF1ZCBkZXRlY3Rpb24iCiAgICAgICAgcHMuY2hlY2suY2MgLT4gcHMuY2hlY2suY2IgIkNoZWNrcyBiYWxhbmNlIgogICAgICAgIHBzLmNoZWNrLmNiIC0+IHBzLmRiICJSZWFkcyBhY2NvdW50IGJhbGFuY2UiCgogICAgICAgIC8vINCh0LLRj9C30Lgg0LLQvdGD0YLRgNC4IFBheSBTZXJ2aWNlCiAgICAgICAgcHMuYXBpIC0+IHBzLnBheS5wYyAiQ2FsbHMgcGF5bWVudCBleGVjdXRpb24gZW5kcG9pbnQiCiAgICAgICAgcHMucGF5LnBjIC0+IHBzLnBheS5wcCAiUHJvY2Vzc2VzIHBheW1lbnQgcmVxdWVzdCIKICAgICAgICBwcy5wYXkucHAgLT4gcHMucGF5LnBzYiAiU2VuZHMgcGF5bWVudCB0byBzZXR0bGVtZW50IgogICAgICAgIHBzLnBheS5wcCAtPiBwcy5kYiAiU3RvcmVzIHRyYW5zYWN0aW9uIHJlc3VsdCIKICAgIH0KCiAgICB2aWV3cyB7CiAgICAgICAgLy8gU3lzdGVtIENvbnRleHQKICAgICAgICBzeXN0ZW1Db250ZXh0IHBzICJTeXN0ZW1Db250ZXh0IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvbGF5b3V0IGxyCiAgICAgICAgfQoKICAgICAgICAvLyBDb250YWluZXIKICAgICAgICBjb250YWluZXIgcHMgIkNvbnRhaW5lckRpYWdyYW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9sYXlvdXQgbHIKICAgICAgICB9CgogICAgICAgIC8vIENvbXBvbmVudCDQtNC70Y8gQ2hlY2sgU2VydmljZQogICAgICAgIGNvbXBvbmVudCBwcy5jaGVjayAiQ2hlY2tTZXJ2aWNlQ29tcG9uZW50cyIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b2xheW91dCBscgogICAgICAgIH0KCiAgICAgICAgLy8gQ29tcG9uZW50INC00LvRjyBQYXkgU2VydmljZQogICAgICAgIGNvbXBvbmVudCBwcy5wYXkgIlBheVNlcnZpY2VDb21wb25lbnRzIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvbGF5b3V0IGxyCiAgICAgICAgfQogICAgfQp9Cg=="
+  },
+  "views" : {
+    "componentViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "containerId" : "5",
+      "dimensions" : {
+        "height" : 2011,
+        "width" : 3100
+      },
+      "elements" : [ {
+        "id" : "4",
+        "x" : 200,
+        "y" : 785
+      }, {
+        "id" : "6",
+        "x" : 950,
+        "y" : 785
+      }, {
+        "id" : "7",
+        "x" : 1700,
+        "y" : 1385
+      }, {
+        "id" : "8",
+        "x" : 1700,
+        "y" : 785
+      }, {
+        "id" : "9",
+        "x" : 1700,
+        "y" : 185
+      }, {
+        "id" : "14",
+        "x" : 2450,
+        "y" : 185
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "CheckServiceComponents",
+      "order" : 3,
+      "relationships" : [ {
+        "id" : "26"
+      }, {
+        "id" : "27"
+      }, {
+        "id" : "28"
+      }, {
+        "id" : "29"
+      }, {
+        "id" : "30"
+      } ]
+    }, {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "containerId" : "10",
+      "dimensions" : {
+        "height" : 1320,
+        "width" : 3120
+      },
+      "elements" : [ {
+        "id" : "4",
+        "x" : 200,
+        "y" : 185
+      }, {
+        "id" : "11",
+        "x" : 950,
+        "y" : 185
+      }, {
+        "id" : "12",
+        "x" : 1700,
+        "y" : 185
+      }, {
+        "id" : "13",
+        "x" : 2450,
+        "y" : 185
+      }, {
+        "id" : "14",
+        "x" : 2450,
+        "y" : 785
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "PayServiceComponents",
+      "order" : 4,
+      "relationships" : [ {
+        "id" : "31"
+      }, {
+        "id" : "32"
+      }, {
+        "id" : "33"
+      }, {
+        "id" : "34"
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "lastSavedView" : "CheckServiceComponents",
+      "metadataSymbols" : "SquareBrackets",
+      "styles" : { },
+      "terminology" : { }
+    },
+    "containerViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "dimensions" : {
+        "height" : 1411,
+        "width" : 3120
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 199,
+        "y" : 185
+      }, {
+        "id" : "2",
+        "x" : 199,
+        "y" : 785
+      }, {
+        "id" : "4",
+        "x" : 949,
+        "y" : 485
+      }, {
+        "id" : "5",
+        "x" : 1699,
+        "y" : 185
+      }, {
+        "id" : "10",
+        "x" : 1699,
+        "y" : 785
+      }, {
+        "id" : "14",
+        "x" : 2449,
+        "y" : 785
+      }, {
+        "id" : "15",
+        "x" : 2449,
+        "y" : 185
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "key" : "ContainerDiagram",
+      "order" : 2,
+      "relationships" : [ {
+        "id" : "16"
+      }, {
+        "id" : "18"
+      }, {
+        "id" : "20"
+      }, {
+        "id" : "21"
+      }, {
+        "id" : "22"
+      }, {
+        "id" : "23"
+      }, {
+        "id" : "24"
+      }, {
+        "id" : "25"
+      } ],
+      "softwareSystemId" : "3"
+    } ],
+    "systemContextViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "dimensions" : {
+        "height" : 1300,
+        "width" : 1600
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 200,
+        "y" : 165
+      }, {
+        "id" : "2",
+        "x" : 200,
+        "y" : 765
+      }, {
+        "id" : "3",
+        "x" : 950,
+        "y" : 465
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "key" : "SystemContext",
+      "order" : 1,
+      "relationships" : [ {
+        "id" : "17"
+      }, {
+        "id" : "19"
+      } ],
+      "softwareSystemId" : "3"
+    } ]
+  }
+}
