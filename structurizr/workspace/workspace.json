@@ -4,10 +4,10 @@
   "documentation" : { },
   "id" : 1,
   "lastModifiedAgent" : "structurizr-ui",
-  "lastModifiedDate" : "2025-08-12T06:44:33Z",
+  "lastModifiedDate" : "2025-08-12T07:51:38Z",
   "model" : {
     "people" : [ {
-      "description" : "Initiates payments via mobile app or web portal",
+      "description" : "Initiates payment via mobile app or web portal",
       "id" : "1",
       "location" : "Unspecified",
       "name" : "Customer",
@@ -278,7 +278,7 @@
   },
   "name" : "Payment Domain",
   "properties" : {
-    "structurizr.dsl" : "CndvcmtzcGFjZSAiUGF5bWVudCBEb21haW4iICJDNCBtb2RlbCBmb3IgcGF5bWVudCBwcm9jZXNzaW5nIHdpdGggY2hlY2sgYW5kIHBheSBzZXJ2aWNlcyIgewoKICAgICFpZGVudGlmaWVycyBoaWVyYXJjaGljYWwKCiAgICBtb2RlbCB7CiAgICAgICAgLy8g0JDQutGC0L7RgNGLCiAgICAgICAgdSA9IHBlcnNvbiAiQ3VzdG9tZXIiICJJbml0aWF0ZXMgcGF5bWVudHMgdmlhIG1vYmlsZSBhcHAgb3Igd2ViIHBvcnRhbCIKICAgICAgICBiYSA9IHBlcnNvbiAiQmFuayBBZG1pbiIgIk1vbml0b3JzIGFuZCBtYW5hZ2VzIHBheW1lbnQgb3BlcmF0aW9ucyIKCiAgICAgICAgLy8g0J7RgdC90L7QstC90LDRjyDRgdC40YHRgtC10LzQsAogICAgICAgIHBzID0gc29mdHdhcmVTeXN0ZW0gIlBheW1lbnQgUGxhdGZvcm0iICJIYW5kbGVzIHBheW1lbnQgdmFsaWRhdGlvbiBhbmQgZXhlY3V0aW9uIiB7CiAgICAgICAgICAgIAogICAgICAgICAgICAvLyDQmtC+0L3RgtC10LnQvdC10YDRiwogICAgICAgICAgICBhcGkgPSBjb250YWluZXIgIkFQSSBHYXRld2F5IiAiUm91dGVzIHJlcXVlc3RzIHRvIHBheW1lbnQgc2VydmljZXMiICJKYXZhICsgU3ByaW5nIEJvb3QiCiAgICAgICAgICAgIGNoZWNrID0gY29udGFpbmVyICJDaGVjayBTZXJ2aWNlIiAiVmFsaWRhdGVzIHBheW1lbnQgcmVxdWVzdHMgKGJhbGFuY2UsIGxpbWl0cywgZnJhdWQpIiAiSmF2YSArIFNwcmluZyBCb290IiB7CiAgICAgICAgICAgICAgICAvLyDQmtC+0LzQv9C+0L3QtdC90YLRiyBDaGVjayBTZXJ2aWNlCiAgICAgICAgICAgICAgICBjYyA9IGNvbXBvbmVudCAiVmFsaWRhdGlvbiBDb250cm9sbGVyIiAiUkVTVCBlbmRwb2ludCBmb3IgcGF5bWVudCB2YWxpZGF0aW9uIgogICAgICAgICAgICAgICAgY2wgPSBjb21wb25lbnQgIkxpbWl0IENoZWNrZXIiICJWYWxpZGF0ZXMgZGFpbHkgYW5kIHRyYW5zYWN0aW9uIGxpbWl0cyIKICAgICAgICAgICAgICAgIGNmID0gY29tcG9uZW50ICJGcmF1ZCBEZXRlY3RvciIgIlBlcmZvcm1zIGZyYXVkIGNoZWNrcyIKICAgICAgICAgICAgICAgIGNiID0gY29tcG9uZW50ICJCYWxhbmNlIFZlcmlmaWVyIiAiQ2hlY2tzIGlmIGN1c3RvbWVyIGhhcyBlbm91Z2ggYmFsYW5jZSIKICAgICAgICAgICAgfQogICAgICAgICAgICBwYXkgPSBjb250YWluZXIgIlBheSBTZXJ2aWNlIiAiRXhlY3V0ZXMgcGF5bWVudHMgYW5kIHVwZGF0ZXMgdHJhbnNhY3Rpb24gc3RhdHVzIiAiSmF2YSArIFNwcmluZyBCb290IiB7CiAgICAgICAgICAgICAgICAvLyDQmtC+0LzQv9C+0L3QtdC90YLRiyBQYXkgU2VydmljZQogICAgICAgICAgICAgICAgcGMgPSBjb21wb25lbnQgIlBheW1lbnQgQ29udHJvbGxlciIgIlJFU1QgZW5kcG9pbnQgZm9yIHBheW1lbnQgZXhlY3V0aW9uIgogICAgICAgICAgICAgICAgcHAgPSBjb21wb25lbnQgIlBheW1lbnQgUHJvY2Vzc29yIiAiSGFuZGxlcyBjb3JlIHBheW1lbnQgZXhlY3V0aW9uIGxvZ2ljIgogICAgICAgICAgICAgICAgcHNiID0gY29tcG9uZW50ICJTZXR0bGVtZW50IEJyaWRnZSIgIkludGVncmF0ZXMgd2l0aCBleHRlcm5hbCBjbGVhcmluZy9zZXR0bGVtZW50IHN5c3RlbXMiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZGIgPSBjb250YWluZXIgIlBheW1lbnQgREIiICJTdG9yZXMgcGF5bWVudCB0cmFuc2FjdGlvbnMgYW5kIGxvZ3MiICJQb3N0Z3JlU1FMIgogICAgICAgICAgICBtcSA9IGNvbnRhaW5lciAiTWVzc2FnZSBCcm9rZXIiICJBc3luY2hyb25vdXMgZXZlbnRzIGJldHdlZW4gc2VydmljZXMiICJLYWZrYSIKICAgICAgICB9CgogICAgICAgIC8vINCh0LLRj9C30Lgg0L3QsCDRg9GA0L7QstC90LUgU3lzdGVtIENvbnRleHQKICAgICAgICB1IC0+IHBzLmFwaSAiSW5pdGlhdGVzIHBheW1lbnQgdmlhIG1vYmlsZS93ZWIiCiAgICAgICAgYmEgLT4gcHMuYXBpICJNb25pdG9ycyBwYXltZW50cyB2aWEgYWRtaW4gY29uc29sZSIKCiAgICAgICAgLy8g0KHQstGP0LfQuCDQvdCwINGD0YDQvtCy0L3QtSBDb250YWluZXIKICAgICAgICBwcy5hcGkgLT4gcHMuY2hlY2sgIlZhbGlkYXRlcyBwYXltZW50IHJlcXVlc3RzIgogICAgICAgIHBzLmFwaSAtPiBwcy5wYXkgIkV4ZWN1dGVzIHBheW1lbnRzIGFmdGVyIHZhbGlkYXRpb24iCiAgICAgICAgcHMuY2hlY2sgLT4gcHMuZGIgIlJlYWRzIGN1c3RvbWVyL2FjY291bnQgZGF0YSIKICAgICAgICBwcy5jaGVjayAtPiBwcy5tcSAiUHVibGlzaGVzIHZhbGlkYXRpb24gZXZlbnRzIgogICAgICAgIHBzLnBheSAtPiBwcy5kYiAiV3JpdGVzIHBheW1lbnQgdHJhbnNhY3Rpb25zIgogICAgICAgIHBzLnBheSAtPiBwcy5tcSAiUHVibGlzaGVzIHBheW1lbnQgZXZlbnRzIgoKICAgICAgICAvLyDQodCy0Y/Qt9C4INCy0L3Rg9GC0YDQuCBDaGVjayBTZXJ2aWNlCiAgICAgICAgcHMuYXBpIC0+IHBzLmNoZWNrLmNjICJDYWxscyB2YWxpZGF0aW9uIGVuZHBvaW50IgogICAgICAgIHBzLmNoZWNrLmNjIC0+IHBzLmNoZWNrLmNsICJDaGVja3MgbGltaXRzIgogICAgICAgIHBzLmNoZWNrLmNjIC0+IHBzLmNoZWNrLmNmICJQZXJmb3JtcyBmcmF1ZCBkZXRlY3Rpb24iCiAgICAgICAgcHMuY2hlY2suY2MgLT4gcHMuY2hlY2suY2IgIkNoZWNrcyBiYWxhbmNlIgogICAgICAgIHBzLmNoZWNrLmNiIC0+IHBzLmRiICJSZWFkcyBhY2NvdW50IGJhbGFuY2UiCgogICAgICAgIC8vINCh0LLRj9C30Lgg0LLQvdGD0YLRgNC4IFBheSBTZXJ2aWNlCiAgICAgICAgcHMuYXBpIC0+IHBzLnBheS5wYyAiQ2FsbHMgcGF5bWVudCBleGVjdXRpb24gZW5kcG9pbnQiCiAgICAgICAgcHMucGF5LnBjIC0+IHBzLnBheS5wcCAiUHJvY2Vzc2VzIHBheW1lbnQgcmVxdWVzdCIKICAgICAgICBwcy5wYXkucHAgLT4gcHMucGF5LnBzYiAiU2VuZHMgcGF5bWVudCB0byBzZXR0bGVtZW50IgogICAgICAgIHBzLnBheS5wcCAtPiBwcy5kYiAiU3RvcmVzIHRyYW5zYWN0aW9uIHJlc3VsdCIKICAgIH0KCiAgICB2aWV3cyB7CiAgICAgICAgLy8gU3lzdGVtIENvbnRleHQKICAgICAgICBzeXN0ZW1Db250ZXh0IHBzICJTeXN0ZW1Db250ZXh0IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvbGF5b3V0IGxyCiAgICAgICAgfQoKICAgICAgICAvLyBDb250YWluZXIKICAgICAgICBjb250YWluZXIgcHMgIkNvbnRhaW5lckRpYWdyYW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9sYXlvdXQgbHIKICAgICAgICB9CgogICAgICAgIC8vIENvbXBvbmVudCDQtNC70Y8gQ2hlY2sgU2VydmljZQogICAgICAgIGNvbXBvbmVudCBwcy5jaGVjayAiQ2hlY2tTZXJ2aWNlQ29tcG9uZW50cyIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b2xheW91dCBscgogICAgICAgIH0KCiAgICAgICAgLy8gQ29tcG9uZW50INC00LvRjyBQYXkgU2VydmljZQogICAgICAgIGNvbXBvbmVudCBwcy5wYXkgIlBheVNlcnZpY2VDb21wb25lbnRzIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvbGF5b3V0IGxyCiAgICAgICAgfQogICAgfQp9Cg=="
+    "structurizr.dsl" : "CndvcmtzcGFjZSAiUGF5bWVudCBEb21haW4iICJDNCBtb2RlbCBmb3IgcGF5bWVudCBwcm9jZXNzaW5nIHdpdGggY2hlY2sgYW5kIHBheSBzZXJ2aWNlcyIgewoKICAgICFpZGVudGlmaWVycyBoaWVyYXJjaGljYWwKCiAgICBtb2RlbCB7CiAgICAgICAgLy8g0JDQutGC0L7RgNGLCiAgICAgICAgdSA9IHBlcnNvbiAiQ3VzdG9tZXIiICJJbml0aWF0ZXMgcGF5bWVudCB2aWEgbW9iaWxlIGFwcCBvciB3ZWIgcG9ydGFsIgogICAgICAgIGJhID0gcGVyc29uICJCYW5rIEFkbWluIiAiTW9uaXRvcnMgYW5kIG1hbmFnZXMgcGF5bWVudCBvcGVyYXRpb25zIgoKICAgICAgICAvLyDQntGB0L3QvtCy0L3QsNGPINGB0LjRgdGC0LXQvNCwCiAgICAgICAgcHMgPSBzb2Z0d2FyZVN5c3RlbSAiUGF5bWVudCBQbGF0Zm9ybSIgIkhhbmRsZXMgcGF5bWVudCB2YWxpZGF0aW9uIGFuZCBleGVjdXRpb24iIHsKICAgICAgICAgICAgCiAgICAgICAgICAgIC8vINCa0L7QvdGC0LXQudC90LXRgNGLCiAgICAgICAgICAgIGFwaSA9IGNvbnRhaW5lciAiQVBJIEdhdGV3YXkiICJSb3V0ZXMgcmVxdWVzdHMgdG8gcGF5bWVudCBzZXJ2aWNlcyIgIkphdmEgKyBTcHJpbmcgQm9vdCIKICAgICAgICAgICAgY2hlY2sgPSBjb250YWluZXIgIkNoZWNrIFNlcnZpY2UiICJWYWxpZGF0ZXMgcGF5bWVudCByZXF1ZXN0cyAoYmFsYW5jZSwgbGltaXRzLCBmcmF1ZCkiICJKYXZhICsgU3ByaW5nIEJvb3QiIHsKICAgICAgICAgICAgICAgIC8vINCa0L7QvNC/0L7QvdC10L3RgtGLIENoZWNrIFNlcnZpY2UKICAgICAgICAgICAgICAgIGNjID0gY29tcG9uZW50ICJWYWxpZGF0aW9uIENvbnRyb2xsZXIiICJSRVNUIGVuZHBvaW50IGZvciBwYXltZW50IHZhbGlkYXRpb24iCiAgICAgICAgICAgICAgICBjbCA9IGNvbXBvbmVudCAiTGltaXQgQ2hlY2tlciIgIlZhbGlkYXRlcyBkYWlseSBhbmQgdHJhbnNhY3Rpb24gbGltaXRzIgogICAgICAgICAgICAgICAgY2YgPSBjb21wb25lbnQgIkZyYXVkIERldGVjdG9yIiAiUGVyZm9ybXMgZnJhdWQgY2hlY2tzIgogICAgICAgICAgICAgICAgY2IgPSBjb21wb25lbnQgIkJhbGFuY2UgVmVyaWZpZXIiICJDaGVja3MgaWYgY3VzdG9tZXIgaGFzIGVub3VnaCBiYWxhbmNlIgogICAgICAgICAgICB9CiAgICAgICAgICAgIHBheSA9IGNvbnRhaW5lciAiUGF5IFNlcnZpY2UiICJFeGVjdXRlcyBwYXltZW50cyBhbmQgdXBkYXRlcyB0cmFuc2FjdGlvbiBzdGF0dXMiICJKYXZhICsgU3ByaW5nIEJvb3QiIHsKICAgICAgICAgICAgICAgIC8vINCa0L7QvNC/0L7QvdC10L3RgtGLIFBheSBTZXJ2aWNlCiAgICAgICAgICAgICAgICBwYyA9IGNvbXBvbmVudCAiUGF5bWVudCBDb250cm9sbGVyIiAiUkVTVCBlbmRwb2ludCBmb3IgcGF5bWVudCBleGVjdXRpb24iCiAgICAgICAgICAgICAgICBwcCA9IGNvbXBvbmVudCAiUGF5bWVudCBQcm9jZXNzb3IiICJIYW5kbGVzIGNvcmUgcGF5bWVudCBleGVjdXRpb24gbG9naWMiCiAgICAgICAgICAgICAgICBwc2IgPSBjb21wb25lbnQgIlNldHRsZW1lbnQgQnJpZGdlIiAiSW50ZWdyYXRlcyB3aXRoIGV4dGVybmFsIGNsZWFyaW5nL3NldHRsZW1lbnQgc3lzdGVtcyIKICAgICAgICAgICAgfQogICAgICAgICAgICBkYiA9IGNvbnRhaW5lciAiUGF5bWVudCBEQiIgIlN0b3JlcyBwYXltZW50IHRyYW5zYWN0aW9ucyBhbmQgbG9ncyIgIlBvc3RncmVTUUwiCiAgICAgICAgICAgIG1xID0gY29udGFpbmVyICJNZXNzYWdlIEJyb2tlciIgIkFzeW5jaHJvbm91cyBldmVudHMgYmV0d2VlbiBzZXJ2aWNlcyIgIkthZmthIgogICAgICAgIH0KCiAgICAgICAgLy8g0KHQstGP0LfQuCDQvdCwINGD0YDQvtCy0L3QtSBTeXN0ZW0gQ29udGV4dAogICAgICAgIHUgLT4gcHMuYXBpICJJbml0aWF0ZXMgcGF5bWVudCB2aWEgbW9iaWxlL3dlYiIKICAgICAgICBiYSAtPiBwcy5hcGkgIk1vbml0b3JzIHBheW1lbnRzIHZpYSBhZG1pbiBjb25zb2xlIgoKICAgICAgICAvLyDQodCy0Y/Qt9C4INC90LAg0YPRgNC+0LLQvdC1IENvbnRhaW5lcgogICAgICAgIHBzLmFwaSAtPiBwcy5jaGVjayAiVmFsaWRhdGVzIHBheW1lbnQgcmVxdWVzdHMiCiAgICAgICAgcHMuYXBpIC0+IHBzLnBheSAiRXhlY3V0ZXMgcGF5bWVudHMgYWZ0ZXIgdmFsaWRhdGlvbiIKICAgICAgICBwcy5jaGVjayAtPiBwcy5kYiAiUmVhZHMgY3VzdG9tZXIvYWNjb3VudCBkYXRhIgogICAgICAgIHBzLmNoZWNrIC0+IHBzLm1xICJQdWJsaXNoZXMgdmFsaWRhdGlvbiBldmVudHMiCiAgICAgICAgcHMucGF5IC0+IHBzLmRiICJXcml0ZXMgcGF5bWVudCB0cmFuc2FjdGlvbnMiCiAgICAgICAgcHMucGF5IC0+IHBzLm1xICJQdWJsaXNoZXMgcGF5bWVudCBldmVudHMiCgogICAgICAgIC8vINCh0LLRj9C30Lgg0LLQvdGD0YLRgNC4IENoZWNrIFNlcnZpY2UKICAgICAgICBwcy5hcGkgLT4gcHMuY2hlY2suY2MgIkNhbGxzIHZhbGlkYXRpb24gZW5kcG9pbnQiCiAgICAgICAgcHMuY2hlY2suY2MgLT4gcHMuY2hlY2suY2wgIkNoZWNrcyBsaW1pdHMiCiAgICAgICAgcHMuY2hlY2suY2MgLT4gcHMuY2hlY2suY2YgIlBlcmZvcm1zIGZyYXVkIGRldGVjdGlvbiIKICAgICAgICBwcy5jaGVjay5jYyAtPiBwcy5jaGVjay5jYiAiQ2hlY2tzIGJhbGFuY2UiCiAgICAgICAgcHMuY2hlY2suY2IgLT4gcHMuZGIgIlJlYWRzIGFjY291bnQgYmFsYW5jZSIKCiAgICAgICAgLy8g0KHQstGP0LfQuCDQstC90YPRgtGA0LggUGF5IFNlcnZpY2UKICAgICAgICBwcy5hcGkgLT4gcHMucGF5LnBjICJDYWxscyBwYXltZW50IGV4ZWN1dGlvbiBlbmRwb2ludCIKICAgICAgICBwcy5wYXkucGMgLT4gcHMucGF5LnBwICJQcm9jZXNzZXMgcGF5bWVudCByZXF1ZXN0IgogICAgICAgIHBzLnBheS5wcCAtPiBwcy5wYXkucHNiICJTZW5kcyBwYXltZW50IHRvIHNldHRsZW1lbnQiCiAgICAgICAgcHMucGF5LnBwIC0+IHBzLmRiICJTdG9yZXMgdHJhbnNhY3Rpb24gcmVzdWx0IgogICAgfQoKICAgIHZpZXdzIHsKICAgICAgICAvLyBTeXN0ZW0gQ29udGV4dAogICAgICAgIHN5c3RlbUNvbnRleHQgcHMgIlN5c3RlbUNvbnRleHQiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9sYXlvdXQgbHIKICAgICAgICB9CgogICAgICAgIC8vIENvbnRhaW5lcgogICAgICAgIGNvbnRhaW5lciBwcyAiQ29udGFpbmVyRGlhZ3JhbSIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b2xheW91dCBscgogICAgICAgIH0KCiAgICAgICAgLy8gQ29tcG9uZW50INC00LvRjyBDaGVjayBTZXJ2aWNlCiAgICAgICAgY29tcG9uZW50IHBzLmNoZWNrICJDaGVja1NlcnZpY2VDb21wb25lbnRzIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvbGF5b3V0IGxyCiAgICAgICAgfQoKICAgICAgICAvLyBDb21wb25lbnQg0LTQu9GPIFBheSBTZXJ2aWNlCiAgICAgICAgY29tcG9uZW50IHBzLnBheSAiUGF5U2VydmljZUNvbXBvbmVudHMiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9sYXlvdXQgbHIKICAgICAgICB9CiAgICB9Cn0K"
   },
   "views" : {
     "componentViews" : [ {
@@ -337,7 +337,7 @@
       } ]
     }, {
       "automaticLayout" : {
-        "applied" : true,
+        "applied" : false,
         "edgeSeparation" : 0,
         "implementation" : "Graphviz",
         "nodeSeparation" : 300,
@@ -346,30 +346,26 @@
         "vertices" : false
       },
       "containerId" : "10",
-      "dimensions" : {
-        "height" : 1320,
-        "width" : 3120
-      },
       "elements" : [ {
         "id" : "4",
-        "x" : 200,
-        "y" : 185
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "11",
-        "x" : 950,
-        "y" : 185
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "12",
-        "x" : 1700,
-        "y" : 185
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "13",
-        "x" : 2450,
-        "y" : 185
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "14",
-        "x" : 2450,
-        "y" : 785
+        "x" : 0,
+        "y" : 0
       } ],
       "externalContainerBoundariesVisible" : false,
       "key" : "PayServiceComponents",
@@ -386,7 +382,7 @@
     } ],
     "configuration" : {
       "branding" : { },
-      "lastSavedView" : "CheckServiceComponents",
+      "lastSavedView" : "ContainerDiagram",
       "metadataSymbols" : "SquareBrackets",
       "styles" : { },
       "terminology" : { }
@@ -407,31 +403,31 @@
       },
       "elements" : [ {
         "id" : "1",
-        "x" : 199,
+        "x" : 200,
         "y" : 185
       }, {
         "id" : "2",
-        "x" : 199,
+        "x" : 200,
         "y" : 785
       }, {
         "id" : "4",
-        "x" : 949,
+        "x" : 950,
         "y" : 485
       }, {
         "id" : "5",
-        "x" : 1699,
+        "x" : 1700,
         "y" : 185
       }, {
         "id" : "10",
-        "x" : 1699,
+        "x" : 1700,
         "y" : 785
       }, {
         "id" : "14",
-        "x" : 2449,
+        "x" : 2450,
         "y" : 785
       }, {
         "id" : "15",
-        "x" : 2449,
+        "x" : 2450,
         "y" : 185
       } ],
       "externalSoftwareSystemBoundariesVisible" : false,
@@ -458,7 +454,7 @@
     } ],
     "systemContextViews" : [ {
       "automaticLayout" : {
-        "applied" : true,
+        "applied" : false,
         "edgeSeparation" : 0,
         "implementation" : "Graphviz",
         "nodeSeparation" : 300,
@@ -466,22 +462,18 @@
         "rankSeparation" : 300,
         "vertices" : false
       },
-      "dimensions" : {
-        "height" : 1300,
-        "width" : 1600
-      },
       "elements" : [ {
         "id" : "1",
-        "x" : 200,
-        "y" : 165
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "2",
-        "x" : 200,
-        "y" : 765
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "3",
-        "x" : 950,
-        "y" : 465
+        "x" : 0,
+        "y" : 0
       } ],
       "enterpriseBoundaryVisible" : true,
       "key" : "SystemContext",

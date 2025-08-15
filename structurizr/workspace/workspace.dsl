@@ -5,7 +5,7 @@ workspace "Payment Domain" "C4 model for payment processing with check and pay s
 
     model {
         // Акторы
-        u = person "Customer" "Initiates payments via mobile app or web portal"
+        u = person "Customer" "Initiates payment via mobile app or web portal"
         ba = person "Bank Admin" "Monitors and manages payment operations"
 
         // Основная система
