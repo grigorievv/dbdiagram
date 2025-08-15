@@ -4,7 +4,7 @@
   "documentation" : { },
   "id" : 1,
   "lastModifiedAgent" : "structurizr-ui",
-  "lastModifiedDate" : "2025-08-12T07:51:38Z",
+  "lastModifiedDate" : "2025-08-15T05:36:48Z",
   "model" : {
     "people" : [ {
       "description" : "Initiates payment via mobile app or web portal",
@@ -283,7 +283,7 @@
   "views" : {
     "componentViews" : [ {
       "automaticLayout" : {
-        "applied" : true,
+        "applied" : false,
         "edgeSeparation" : 0,
         "implementation" : "Graphviz",
         "nodeSeparation" : 300,
@@ -292,34 +292,30 @@
         "vertices" : false
       },
       "containerId" : "5",
-      "dimensions" : {
-        "height" : 2011,
-        "width" : 3100
-      },
       "elements" : [ {
         "id" : "4",
-        "x" : 200,
-        "y" : 785
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "6",
-        "x" : 950,
-        "y" : 785
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "7",
-        "x" : 1700,
-        "y" : 1385
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "8",
-        "x" : 1700,
-        "y" : 785
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "9",
-        "x" : 1700,
-        "y" : 185
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "14",
-        "x" : 2450,
-        "y" : 185
+        "x" : 0,
+        "y" : 0
       } ],
       "externalContainerBoundariesVisible" : false,
       "key" : "CheckServiceComponents",
@@ -403,31 +399,31 @@
       },
       "elements" : [ {
         "id" : "1",
-        "x" : 200,
+        "x" : 199,
         "y" : 185
       }, {
         "id" : "2",
-        "x" : 200,
+        "x" : 199,
         "y" : 785
       }, {
         "id" : "4",
-        "x" : 950,
+        "x" : 949,
         "y" : 485
       }, {
         "id" : "5",
-        "x" : 1700,
+        "x" : 1699,
         "y" : 185
       }, {
         "id" : "10",
-        "x" : 1700,
+        "x" : 1699,
         "y" : 785
       }, {
         "id" : "14",
-        "x" : 2450,
+        "x" : 2449,
         "y" : 785
       }, {
         "id" : "15",
-        "x" : 2450,
+        "x" : 2449,
         "y" : 185
       } ],
       "externalSoftwareSystemBoundariesVisible" : false,
